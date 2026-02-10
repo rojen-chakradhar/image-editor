@@ -100,6 +100,12 @@ main {
   font-size: calc(var(--font-size-2xl)*6);
 }
 
+canvas {
+  display: none;
+  max-height: 85dvh;
+  max-width: 70dvw;
+}
+
 .tool-container {
   display: flex;
   justify-content: center;
@@ -110,6 +116,7 @@ main {
 .btn {
   padding: var(--padding-sm) var(--padding-2xl);
   font-size: var(--font-size-md);
+  font-weight: 500;
   border: none;
   border-radius: var(--border-radius-sm);
   outline: none;
@@ -133,12 +140,14 @@ aside {
   padding: var(--padding-sm);
   border: 1px solid var(--bg-secondary);
   border-radius: var(--border-radius-md);
+  overflow-y: auto;
 }
 
 h2 {
   font-size: var(--font-size-xl);
   text-transform: capitalize;
   line-height: 1;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
@@ -149,15 +158,22 @@ h2 {
   margin-top: var(--margin-md);
 }
 
+.filter p {
+  font-size: var(--font-size-md);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
 .filter input {
   width: 100%;
   outline: none;
   appearance: none;
+  background-color: var(--bg-primary);
 }
 
 .filter input::-webkit-slider-runnable-track {
   height: 10px;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-lg);
   background-color: var(--bg-secondary);
 }
 
@@ -165,6 +181,7 @@ h2 {
   appearance: none;
   width: 20px;
   aspect-ratio: 1 / 1;
+  margin-top: -4.5px;
   border-radius: 50%;
   background-color: var(--bg-danger);
   cursor: pointer;
