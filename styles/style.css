@@ -104,6 +104,7 @@ canvas {
   display: none;
   max-height: 85dvh;
   max-width: 70dvw;
+  background-color: transparent;
 }
 
 .tool-container {
@@ -117,6 +118,7 @@ canvas {
   padding: var(--padding-sm) var(--padding-2xl);
   font-size: var(--font-size-md);
   font-weight: 500;
+  text-transform: capitalize;
   border: none;
   border-radius: var(--border-radius-sm);
   outline: none;
@@ -137,10 +139,39 @@ canvas {
 
 aside {
   flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-2xl);
   padding: var(--padding-sm);
   border: 1px solid var(--bg-secondary);
   border-radius: var(--border-radius-md);
   overflow-y: auto;
+}
+
+aside::-webkit-scrollbar {
+  width: 8px;
+}
+
+aside::-webkit-scrollbar-track {
+  border: 1px solid var(--bg-secondary);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-primary);
+}
+
+aside::-webkit-scrollbar-thumb {
+  border: 1px solid var(--text-tertiary);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-secondary);
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+  border: 1px solid var(--text-secondary);
+}
+
+.ctnr {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-md);
 }
 
 h2 {
@@ -151,33 +182,32 @@ h2 {
   color: var(--text-primary);
 }
 
-.filter {
+.filters {
   display: flex;
   flex-direction: column;
   gap: var(--gutter-sm);
-  margin-top: var(--margin-md);
 }
 
-.filter p {
+.filters p {
   font-size: var(--font-size-md);
   text-transform: capitalize;
   font-weight: 500;
 }
 
-.filter input {
+.filters input {
   width: 100%;
   outline: none;
   appearance: none;
   background-color: var(--bg-primary);
 }
 
-.filter input::-webkit-slider-runnable-track {
+.filters input::-webkit-slider-runnable-track {
   height: 10px;
   border-radius: var(--border-radius-lg);
   background-color: var(--bg-secondary);
 }
 
-.filter input::-webkit-slider-thumb {
+.filters input::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   aspect-ratio: 1 / 1;
@@ -185,4 +215,16 @@ h2 {
   border-radius: 50%;
   background-color: var(--bg-danger);
   cursor: pointer;
+}
+
+.presets {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gutter-sm);
+}
+
+.preset-btn {
+  font-size: var(--font-size-sm);
+  padding: var(--padding-sm) var(--padding-md);
 }
