@@ -8,7 +8,25 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
   </head>
   <body>
-    <main></main>
-    <script src="./scripts/script.js"></script>
+    <main>
+      <section class="image-container">
+        <article class="placeholder">
+          <i class="ri-image-line"></i>
+          <p>No image chosen</p>
+        </article>
+      </section>
+      <section class="tool-container">
+        <label class="btn" for="image-input">Choose image <input type="file" name="image" id="image-input" accept="image/*" hidden></label>
+        <button class="btn" id="reset-btn">Reset</button>
+        <button class="btn" id="download-btn">Download</button>
+      </section>
+    </main>
+    <aside>
+      <h2>filters</h2>
+      <section class="filter">
+        <p>Brightness</p>
+        <input type="range" min="0" max="200" name="brightness" value="100">
+      </section>
+    </aside>
   </body>
 </html>
