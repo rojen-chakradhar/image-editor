@@ -228,3 +228,13 @@ h2 {
   font-size: var(--font-size-sm);
   padding: var(--padding-sm) var(--padding-md);
 }
+
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+  }
+  .btn {
+    font-size: var(--font-size-sm);
+    padding: var(--padding-sm) var(--padding-sm);
+  }
+}

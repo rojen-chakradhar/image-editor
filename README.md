@@ -23,7 +23,7 @@ A small image editor site whre you can change brightness, contrast, saturation, 
 - go to repo
 - look for image-editor
 - clone the repo
-- run index..html file
+- run index.html file
 - the site is open
 - now you can edit images
 
